@@ -1,0 +1,14 @@
+
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Arial', sans-serif; background: #f4f6f8; color: #333; padding: 20px; }
+h1, h2 { margin-bottom: 15px; color: #1a73e8; }
+button { background: #1a73e8; color: #fff; border: none; padding: 7px 12px; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
+button:hover { background: #155ab6; }
+form { display:flex; flex-direction:column; gap:10px; margin-bottom: 20px; background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); max-width: 400px; }
+input, select { padding: 8px; border-radius: 5px; border: 1px solid #ccc; }
+#product-list, #admin-products, #admin-locations, #admin-users { display:flex; flex-wrap:wrap; gap:15px; }
+.card, .admin-card { background:#fff; border-radius:8px; padding:10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); flex:1 1 150px; text-align:center; }
+.product-card img { max-width:100%; border-radius:5px; margin-bottom:5px; }
+.admin-card { text-align:left; }
+.admin-card button { margin-top:5px; }
+@media (max-width:768px) { form, .card, .admin-card { width:100%; } #product-list, #admin-products, #admin-locations, #admin-users { flex-direction:column; } }

@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JOMPO FarmLink - Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>JOMPO FarmLink</h1>
+<button onclick="logoutUser()">Logout</button>
+<h2>Add Product</h2>
+<form id="product-form">
+<input type="text" name="product-name" placeholder="Product Name" required>
+<input type="number" name="product-price" placeholder="Price" required>
+<select name="product-location" id="product-location" required></select>
+<input type="file" name="product-image" accept="image/*" required>
+<button type="submit">Add Product</button>
+</form>
+<h2>Market Products</h2>
+<div id="product-list"></div>
+<div id="admin-section" style="display:none;">
+<h2>Admin: Manage Products</h2>
+<div id="admin-products"></div>
+<h2>Admin: Manage Locations</h2>
+<form id="location-form">
+<input type="text" id="new-location" placeholder="Location Name" required>
+<button type="submit">Add Location</button>
+</form>
+<div id="admin-locations"></div>
+<h2>Admin: Users</h2>
+<div id="admin-users"></div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
