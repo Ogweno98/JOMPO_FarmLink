@@ -1,23 +1,34 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JOMPO FarmLink - Login</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<form id="login-form">
-<h2>Login</h2>
-<input type="email" id="login-email" placeholder="Email" required>
-<input type="password" id="login-password" placeholder="Password" required>
-<button type="submit">Login</button>
-<p>Don't have an account? <a href="signup.html">Sign up</a></p>
-</form>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
-<script src="app.js"></script>
+
+<div class="page" id="login-page">
+  <h2>Login to JOMPO FarmLink</h2>
+  <input type="email" id="loginEmail" placeholder="Email">
+  <input type="password" id="loginPassword" placeholder="Password">
+  <button onclick="login()">Login</button>
+  <p>Don't have an account? <button onclick="showSignup()">Signup</button></p>
+</div>
+
+<div class="page" id="signup-page" style="display:none">
+  <h2>Signup for JOMPO FarmLink</h2>
+  <input type="email" id="signupEmail" placeholder="Email">
+  <input type="password" id="signupPassword" placeholder="Password">
+  <button onclick="signup()">Signup</button>
+  <p>Already have an account? <button onclick="showLogin()">Login</button></p>
+</div>
+
+<script type="module" src="app.js"></script>
+<script>
+function showSignup(){ document.getElementById('login-page').style.display='none'; document.getElementById('signup-page').style.display='block'; }
+function showLogin(){ document.getElementById('login-page').style.display='block'; document.getElementById('signup-page').style.display='none'; }
+</script>
 </body>
 </html>
+
