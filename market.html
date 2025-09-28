@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JOMPO FarmLink - Market</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page" id="market-page">
+  <h2>JOMPO FarmLink Market</h2>
+  <button onclick="logout()">Logout</button>
+
+  <section>
+    <h3>Add Product</h3>
+    <input type="text" id="productName" placeholder="Product Name">
+    <input type="number" id="productPrice" placeholder="Price">
+    <select id="productLocation"></select>
+    <input type="file" id="productImage">
+    <button onclick="addProduct()">Add Product</button>
+  </section>
+
+  <section>
+    <h3>Filter Products</h3>
+    <input type="text" id="searchInput" placeholder="Search..." oninput="applyFilters()">
+    <select id="locationFilter" onchange="applyFilters()"></select>
+  </section>
+
+  <div id="productsList" class="products-list"></div>
+
+  <section id="admin-dashboard" style="display:none">
+    <h3>Admin Dashboard</h3>
+    <div>
+      <h4>Users</h4>
+      <div id="adminUsersList"></div>
+    </div>
+    <div>
+      <h4>Products</h4>
+      <div id="adminProductsList"></div>
+    </div>
+    <div>
+      <h4>Locations</h4>
+      <input type="text" id="adminNewLocation" placeholder="New Location">
+      <button onclick="adminAddLocation()">Add Location</button>
+      <div id="adminLocationsList"></div>
+    </div>
+  </section>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
